@@ -15,7 +15,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/work", { templateUrl: "partials/work.html", controller: "PageCtrl" })
 
-    .when("/experiences", { templateUrl: "partials/experiences.html", controller: "PageCtrl" })
+    // .when("/experiences", { templateUrl: "partials/experiences.html", controller: "PageCtrl" })
     .when("/blog", { templateUrl: "partials/blog.html", controller: "PageCtrl" })
     .when("/contact", { templateUrl: "partials/contact.html", controller: "PageCtrl" })
 
@@ -71,9 +71,3 @@ app.directive('autoActive', ['$location', function ($location) {
         }
     }
 } ]);
-
-
-
-
-
-
