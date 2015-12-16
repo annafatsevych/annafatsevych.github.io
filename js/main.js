@@ -32,15 +32,12 @@ app.controller('PageCtrl', function ( $scope/*, $location, $http */) {
 
 app.controller("dataImagesWork", function ($scope) {
     $scope.images_work = [
-          { num: 1, category: 'marketing', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 2, category: 'branding', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 3, category: 'design', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 4, category: 'photo', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 5, category: 'marketing', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 6, category: 'design', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 7, category: 'photo', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 8, category: 'marketing', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html" },
-          { num: 9, category: 'design', src: "1100x1057", description: 'Oscar is a decent man. He used to clean porches with pleasure. ', url_details: "details.html"}];
+          { num: 1, category: 'design', src: "images/design1.png", description: 'Study Agenda - Student Time Management App. Logo and Poster Design. ', url_details: "details.html" },
+          { num: 2, category: 'development', src: "images/develop1.png", description: 'Creative Commons Hashing Algorithm Image Search System Prototype', url_details: "details.html" },
+          { num: 3, category: 'design', src: "images/design2.png", description: 'Complete Web Design and Development of DeliciousScrapShop ', url_details: "details.html" }
+
+
+];
 
 });
 
