@@ -18,6 +18,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     // .when("/experiences", { templateUrl: "partials/experiences.html", controller: "PageCtrl" })
     .when("/blog", { templateUrl: "partials/blog.html", controller: "PageCtrl" })
     .when("/contact", { templateUrl: "partials/contact.html", controller: "PageCtrl" })
+    .when("/poster", { templateUrl: "partials/poster.html", controller: "PageCtrl" })
 
     // else 404
     .otherwise("/404", { templateUrl: "partials/404.html", controller: "PageCtrl" });
@@ -26,13 +27,14 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 app.controller('PageCtrl', function ( $scope/*, $location, $http */) {
     console.log("Page Controller reporting for duty.");
+    console.log("Image Poster");
     $scope.pageClass = 'page-effect';
 
 });
 
 app.controller("dataImagesWork", function ($scope) {
     $scope.images_work = [
-          { num: 1, category: 'design', src: "images/design1.png", description: 'Study Agenda - Student Time Management App. Logo and Poster Design. ', url_details: "/images/UsabilityPoster.pdf" },
+          { num: 1, category: 'design', src: "images/design1.png", description: 'Study Agenda - Student Time Management App. Logo and Poster Design. ', url_details: "/#/poster" },
           { num: 2, category: 'development', src: "images/develop1.png", description: 'Creative Commons Hashing Algorithm Image Search System Prototype', url_details: "http://creativecommons.org/" },
           { num: 3, category: 'design', src: "images/design2.png", description: 'Complete Web Design and Development of DeliciousScrapShop ', url_details: "http://deliciousscrapshop.com" }
 
