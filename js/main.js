@@ -33,7 +33,7 @@ app.controller('PageCtrl', function ( $scope/*, $location, $http */) {
 app.controller("dataImagesWork", function ($scope) {
     $scope.images_work = [
           { num: 1, category: 'design', src: "images/design1.png", description: 'Study Agenda - Student Time Management App. Logo and Poster Design. ', url_details: "/images/UsabilityPoster.pdf" },
-          { num: 2, category: 'development', src: "images/develop1.png", description: 'Creative Commons Hashing Algorithm Image Search System Prototype', url_details: "http://creativecommons.ca/" },
+          { num: 2, category: 'development', src: "images/develop1.png", description: 'Creative Commons Hashing Algorithm Image Search System Prototype', url_details: "http://creativecommons.org/" },
           { num: 3, category: 'design', src: "images/design2.png", description: 'Complete Web Design and Development of DeliciousScrapShop ', url_details: "http://deliciousscrapshop.com" }
 
 
