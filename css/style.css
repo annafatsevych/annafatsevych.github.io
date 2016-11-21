@@ -111,7 +111,7 @@ img {
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
- 
+
 #loader:after {
     content: "";
     position: absolute;
@@ -125,7 +125,7 @@ img {
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
- 
+
 @-webkit-keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
@@ -155,13 +155,13 @@ img {
     -webkit-animation: fadeInUp 2s ease-in-out;
     -moz-animation: fadeInUp 2s ease-in-out;
     -o-animation: fadeInUp 2s ease-in-out;
-    animation: fadeInUp 2s ease-in-out;   
+    animation: fadeInUp 2s ease-in-out;
 }*/
-.page-effect.ng-enter 		{  
+.page-effect.ng-enter 		{
     -webkit-animation: fadeInDown 2s ease-in;
     -moz-animation: fadeInDown 2s ease-in;
     -o-animation: fadeInDown 2s ease-in;
-    animation: fadeInDown 2s ease-in;   
+    animation: fadeInDown 2s ease-in;
 }
 
 /***LOGO***/
@@ -231,18 +231,18 @@ header nav .menu li a{
 }
 
 .overlay {
-	background:url(../images/bg_p.png) repeat top left;    
+	background:url(../images/bg_p.png) repeat top left;
 	padding: 100px 0;
 }
 .parallax1 {
-	background:url(../images/architecture.jpg) no-repeat center center fixed;    
+	background:url(../images/architecture.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
     float: left;
-    
+
 }
 
 .prod-line {
@@ -289,7 +289,7 @@ dt { margin-right: 5px; }
 	font-weight: 400;
 	margin-right: 10px;
 	letter-spacing: 1px;
-} 
+}
 
 .cl-effect-11 a::before {
 	position: absolute;
@@ -314,14 +314,14 @@ dt { margin-right: 5px; }
 	max-width: 100%;
 }
 /* Portfolio Items */
-.activegrid ul.nav-pills li {	
+.activegrid ul.nav-pills li {
 	margin: 0px 0 0;
 	display: inline-block;
 	vertical-align: top;
-	
+
 }
-.my-gallery-animation.ng-enter, 
-.my-gallery-animation.ng-leave { 
+.my-gallery-animation.ng-enter,
+.my-gallery-animation.ng-leave {
     -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -329,7 +329,7 @@ dt { margin-right: 5px; }
     transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-} 
+}
 
 .my-gallery-animation.ng-leave.ng-leave-active,
 .my-gallery-animation.ng-enter {
@@ -339,7 +339,7 @@ dt { margin-right: 5px; }
     -o-transform: scale(0);
     transform: scale(0);
     opacity: 0;
-}        
+}
 
 .my-gallery-animation.ng-enter.ng-enter-active,
 .my-gallery-animation.ng-leave {
@@ -375,7 +375,7 @@ dt { margin-right: 5px; }
 	position: relative;
 	display: block;
 	opacity: 1;
-	
+
 }
 .grid figure figcaption p {
 	color: #fff;
@@ -459,13 +459,13 @@ figure.effect-oscar:hover img {
     padding: 100px 0;
 }
 .parallax2 {
-	background:url(../images/section-parallax.jpg) no-repeat center center fixed;    
+	background:url(../images/section-parallax.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-    float: left;   
+    float: left;
 }
 .carousel-desc p{
 	color:#fff;
@@ -704,7 +704,7 @@ figure.effect-oscar:hover img {
     border-color: rgba(0,0,0, .2);
 }
 .form input[type="text"], .form input[type="email"], .form input[type="number"], .form input[type="url"], .form input[type="search"], .form input[type="tel"], .form input[type="password"], .form input[type="date"], .form input[type="color"], .form select {
-    display: inline-block;    
+    display: inline-block;
     vertical-align: middle;
     letter-spacing: 1px;
     color: #777;
@@ -787,21 +787,24 @@ figure.effect-oscar:hover img {
 
 #map_container {
 	width: 100%;
-	margin-top:0px;	
+	margin-top:0px;
 	position: relative;
 }
 #map_container map {
 	height: 400px !important;
 }
-#map_container img { 
-    max-width: none !important; 
-    height: auto !important; 
+#map_container img {
+    max-width: none !important;
+    height: auto !important;
     background: none !important;
     border: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 #section5 {
+	position: relative;
+}
+#section6 {
 	position: relative;
 }
 .mm-open, .mm-close {
@@ -825,7 +828,7 @@ figure.effect-oscar:hover img {
 	background: rgba(0,0,0,0.9);
 	height: 100%;
 	width: 100%;
-    position: absolute;	
+    position: absolute;
     z-index: 2;
     bottom: 0;
     left: 0;
@@ -841,9 +844,9 @@ figure.effect-oscar:hover img {
    -webkit-transform: scale(1);
    -o-transform: scale(1);
    transform: scale(1);
-   -webkit-transition: -moz-transform .5s ease-out; 
-   -moz-transition: -webkit-transform .5s ease-out; 
-   -o-transition: -o-transform .5s ease-out; 
+   -webkit-transition: -moz-transform .5s ease-out;
+   -moz-transition: -webkit-transform .5s ease-out;
+   -o-transition: -o-transform .5s ease-out;
     transition: transform .5s ease-out;
 }
 .content-map{
