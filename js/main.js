@@ -14,6 +14,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     // Pages
     .when("/work", { templateUrl: "partials/work.html", controller: "PageCtrl" })
+    // .when("/resume", { templateUrl: "partials/resume.html", controller: "PageCtrl" })
 
     // .when("/experiences", { templateUrl: "partials/experiences.html", controller: "PageCtrl" })
     .when("/blog", { templateUrl: "partials/blog.html", controller: "PageCtrl" })
