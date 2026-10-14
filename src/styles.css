@@ -36,6 +36,8 @@ a:hover { color: var(--accent-warm); }
 .wrap { width: min(1040px, 100% - 32px); margin-inline: auto; }
 
 .skip { position: absolute; left: -999px; }
+/* Read by screen readers, not shown on screen */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .skip:focus { left: 16px; top: 16px; z-index: 10; background: var(--bg); padding: 8px 12px; }
 
 /* Navigation */
@@ -53,6 +55,7 @@ a:hover { color: var(--accent-warm); }
 
 /* Hero */
 .hero {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 48px; align-items: center;
   padding: clamp(56px, 10vw, 112px) 0 clamp(40px, 6vw, 72px);
 }
 .eyebrow { margin: 0 0 8px; color: var(--accent-warm); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; }
@@ -106,8 +109,8 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
 .footer p { margin: 0; }
 
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 24px; text-align: left; }
-    .grid { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .grid { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .brand { font-size: 1rem; }
   .nav nav a[href="#experience"] { display: none; }
@@ -116,4 +119,39 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .card, .btn { transition: none; }
+}
+
+/* On this day in physics */
+.physics {
+  margin: 0;
+  padding: 22px 24px;
+  background: var(--card); border: 1px solid var(--edge); border-radius: var(--radius);
+}
+.pt-head { margin: 0 0 10px; color: var(--accent-warm); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+/* Always two lines tall, so the card never changes size; longer facts end in "…" */
+.pt-fact {
+  margin: 0 0 14px; font-size: 1.05rem; line-height: 1.6; height: 3.2em;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
+}
+.pt-year { color: var(--accent); font-weight: 700; margin-right: 4px; }
+.pt-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 0.9rem; }
+.pt-count { color: var(--muted); margin-left: auto; }
+.pt-arrows { display: inline-flex; gap: 6px; }
+.repo .pt-arrows { margin-left: auto; }
+.pt-arrow {
+  width: 34px; height: 34px; display: inline-grid; place-items: center; padding: 0 0 2px;
+  font: inherit; font-size: 1.3rem; line-height: 1; color: var(--text); background: none; cursor: pointer;
+  border: 1px solid var(--edge); border-radius: 50%;
+}
+.pt-arrow:hover { border-color: var(--accent); }
+
+/* Read a Repo */
+/* minmax(0, …) lets the column shrink below its longest text, so long content truncates instead of widening the cards */
+.hero-side { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+/* Long repo names stay on one line and end in "…" instead of stretching the card */
+.repo .pt-foot { flex-wrap: nowrap; }
+.rr-name {
+  flex: 1; min-width: 0;
+  font-size: 1.05rem; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
