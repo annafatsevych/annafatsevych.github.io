@@ -53,6 +53,7 @@ a:hover { color: var(--accent-warm); }
 
 /* Hero */
 .hero {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 48px; align-items: center;
   padding: clamp(56px, 10vw, 112px) 0 clamp(40px, 6vw, 72px);
 }
 .eyebrow { margin: 0 0 8px; color: var(--accent-warm); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; }
@@ -107,7 +108,8 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; gap: 24px; text-align: left; }
-    .grid { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; gap: 32px; }
+  .grid { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .brand { font-size: 1rem; }
   .nav nav a[href="#experience"] { display: none; }
@@ -117,3 +119,33 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
   html { scroll-behavior: auto; }
   .card, .btn { transition: none; }
 }
+
+/* On this day in physics */
+.physics {
+  margin: 0;
+  padding: 22px 24px;
+  background: var(--card); border: 1px solid var(--edge); border-radius: var(--radius);
+}
+.physics[hidden] { display: none; }
+.pt-head { margin: 0 0 10px; color: var(--accent-warm); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+/* Always two lines tall, so the card never changes size; longer facts end in "…" */
+.pt-fact {
+  margin: 0 0 14px; font-size: 1.05rem; line-height: 1.6; height: 3.2em;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
+}
+.pt-year { color: var(--accent); font-weight: 700; margin-right: 4px; }
+.pt-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 0.9rem; }
+.pt-count { color: var(--muted); margin-left: auto; }
+.pt-arrows { display: inline-flex; gap: 6px; }
+.repo .pt-arrows { margin-left: auto; }
+.pt-arrow {
+  width: 34px; height: 34px; display: inline-grid; place-items: center; padding: 0 0 2px;
+  font: inherit; font-size: 1.3rem; line-height: 1; color: var(--text); background: none; cursor: pointer;
+  border: 1px solid var(--edge); border-radius: 50%;
+}
+.pt-arrow:hover { border-color: var(--accent); }
+.pt-arrows[hidden], .pt-link[hidden] { display: none; }
+
+/* Read a Repo */
+.hero-side { display: grid; gap: 16px; }
+.rr-name { font-size: 1.05rem; font-weight: 600; overflow-wrap: anywhere; }

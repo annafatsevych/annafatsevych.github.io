@@ -48,6 +48,30 @@
           <a class="btn" href="/cv/">View full CV</a>
         </div>
       </div>
+      <div class="hero-side">
+        <aside class="physics" aria-live="polite" id="physics-today" hidden>
+          <p class="pt-head">On this day in physics · <span class="pt-date"></span></p>
+          <p class="pt-fact"><span class="pt-year"></span> <span class="pt-text"></span></p>
+          <div class="pt-foot">
+            <a class="pt-link" href="#" target="_blank" rel="noopener">Read on Wikipedia</a>
+            <span class="pt-count"></span>
+            <span class="pt-arrows">
+              <button class="pt-arrow pt-prev" type="button" aria-label="Previous fact">‹</button>
+              <button class="pt-arrow pt-next" type="button" aria-label="Next fact">›</button>
+            </span>
+          </div>
+        </aside>
+        <aside class="physics repo" id="read-a-repo" aria-live="polite" hidden>
+          <p class="pt-head">Read a Repo</p>
+          <div class="pt-foot">
+            <a class="rr-name" href="#" target="_blank" rel="noopener"></a>
+            <span class="pt-arrows rr-arrows">
+              <button class="pt-arrow rr-prev" type="button" aria-label="Previous repo">‹</button>
+              <button class="pt-arrow rr-next" type="button" aria-label="Next repo">›</button>
+            </span>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section class="wrap section" id="work">
@@ -133,6 +157,8 @@
     <p>© <span id="year">2026</span> Anna Fatsevych</p>
   </footer>
 
+  <script src="js/physics-today.js"></script>
+  <script src="js/read-a-repo.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
