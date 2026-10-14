@@ -107,8 +107,7 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
 .footer p { margin: 0; }
 
 @media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 24px; text-align: left; }
-    .hero { grid-template-columns: 1fr; gap: 32px; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .grid { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .brand { font-size: 1rem; }
@@ -145,7 +144,8 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
 .pt-arrow:hover { border-color: var(--accent); }
 
 /* Read a Repo */
-.hero-side { display: grid; gap: 16px; }
+/* minmax(0, …) lets the column shrink below its longest text, so long content truncates instead of widening the cards */
+.hero-side { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
 /* Long repo names stay on one line and end in "…" instead of stretching the card */
 .repo .pt-foot { flex-wrap: nowrap; }
 .rr-name {
