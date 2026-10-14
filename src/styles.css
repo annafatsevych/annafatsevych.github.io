@@ -126,7 +126,6 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
   padding: 22px 24px;
   background: var(--card); border: 1px solid var(--edge); border-radius: var(--radius);
 }
-.physics[hidden] { display: none; }
 .pt-head { margin: 0 0 10px; color: var(--accent-warm); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
 /* Always two lines tall, so the card never changes size; longer facts end in "…" */
 .pt-fact {
@@ -144,8 +143,13 @@ h2 { font-weight: 700; font-size: clamp(1.6rem, 4vw, 2rem); letter-spacing: -0.0
   border: 1px solid var(--edge); border-radius: 50%;
 }
 .pt-arrow:hover { border-color: var(--accent); }
-.pt-arrows[hidden], .pt-link[hidden] { display: none; }
 
 /* Read a Repo */
 .hero-side { display: grid; gap: 16px; }
-.rr-name { font-size: 1.05rem; font-weight: 600; overflow-wrap: anywhere; }
+/* Long repo names stay on one line and end in "…" instead of stretching the card */
+.repo .pt-foot { flex-wrap: nowrap; }
+.rr-name {
+  flex: 1; min-width: 0;
+  font-size: 1.05rem; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
