@@ -69,7 +69,7 @@ export default function PhysicsToday() {
 
   const fact = facts[index];
   return (
-    <aside className="physics" aria-live="polite">
+    <section aria-label="On this day in physics" className="physics" aria-live="polite">
       <p className="pt-head">
         On this day in physics · {now.toLocaleDateString(undefined, { month: "long", day: "numeric" })}
       </p>
@@ -79,12 +79,12 @@ export default function PhysicsToday() {
       <div className="pt-foot">
         {fact.url && (
           <a href={fact.url} target="_blank" rel="noopener">
-            Read on Wikipedia
+            Read on Wikipedia<span className="sr-only"> (opens in a new tab)</span>
           </a>
         )}
         {facts.length > 1 && <span className="pt-count">{index + 1} of {facts.length}</span>}
         <Arrows count={facts.length} setIndex={setIndex} label="fact" />
       </div>
-    </aside>
+    </section>
   );
 }

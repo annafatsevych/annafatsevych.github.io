@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 // key), turns the response into a list with `pick`, and remembers it in the
 // browser. Returns [] until loaded, and also if the service can't be reached.
 export default function useDailyFetch(url, cacheKey, pick) {
-  const [items, setItems] = useState(() => {
-    try {
-      const cached = localStorage.getItem(cacheKey);
-      return cached ? JSON.parse(cached) : null;
-    } catch {
-      return null; // storage unavailable: just fetch
-    }
-  });
+  // Starts empty on every load (matching the pre-rendered HTML), then fills in.
+  const [items, setItems] = useState(null);
 
   useEffect(() => {
     if (items) return;
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) return setItems(JSON.parse(cached));
+    } catch {
+      // storage unavailable: just fetch
+    }
     let cancelled = false;
     fetch(url)
       .then((r) => {

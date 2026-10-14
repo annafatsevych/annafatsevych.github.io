@@ -13,5 +13,6 @@ yarn-error.log*
 
 # build output
 /dist
+/dist-ssr
 /build
 .DS_Store

@@ -91,7 +91,8 @@ export default function App() {
       </main>
 
       <footer className="wrap footer">
-        <p>© {new Date().getFullYear()} Anna Fatsevych</p>
+        {/* The year was baked in at build time; let the browser update it without a warning. */}
+        <p suppressHydrationWarning>© {new Date().getFullYear()} Anna Fatsevych</p>
       </footer>
     </>
   );

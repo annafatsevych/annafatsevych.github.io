@@ -30,14 +30,15 @@ export default function ReadARepo() {
 
   const repo = repos[index];
   return (
-    <aside className="physics repo" aria-live="polite">
+    <section aria-label="Read a Repo" className="physics repo" aria-live="polite">
       <p className="pt-head">Read a Repo</p>
       <div className="pt-foot">
         <a className="rr-name" href={repo.url} title={`${repo.name}: ${repo.description}`} target="_blank" rel="noopener">
           {repo.name}
+          <span className="sr-only"> (opens in a new tab)</span>
         </a>
         <Arrows count={repos.length} setIndex={setIndex} label="repo" />
       </div>
-    </aside>
+    </section>
   );
 }
