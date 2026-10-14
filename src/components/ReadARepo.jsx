@@ -8,7 +8,7 @@ import Arrows from "./Arrows";
 const TOPIC = "claude";
 const EXCLUDE = /pentest|penetration|渗透|exploit|hack|crack|cheat|bypass|stealer|keylogger|botnet|ddos|phish|malware|jailbreak|nsfw|porn|nude|lora|disguise|spoof|casino|airdrop/i;
 
-function pick(result) {
+export function pick(result) {
   return (result.items || [])
     .filter((r) => r.description && !r.fork && !EXCLUDE.test(r.full_name + " " + r.description))
     .slice(0, 5)

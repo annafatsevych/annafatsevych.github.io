@@ -25,7 +25,7 @@ function score(text, kind) {
   return s;
 }
 
-function pick(feed) {
+export function pick(feed) {
   const seenText = new Set();
   const seenYear = new Set();
   const found = [];
